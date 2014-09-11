@@ -1,0 +1,18 @@
+<template name="hello">
+  <div class="container">
+
+    <h1>{{title}}</h1>
+
+    <form role="form">
+      <div class="form-group">
+        <input type="text" class="form-control" id="tweet" placeholder="hoge">
+      </div>
+      <p class="text-right">
+        <a class="btn btn-default btn-primary" id="post">tweet</a>
+      </p>
+    </form>
+
+    {{> timeline}}
+
+  </div>
+</template>

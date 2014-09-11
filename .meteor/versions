@@ -12,6 +12,7 @@ ddp@1.0.8
 deps@1.0.3
 ejson@1.0.1
 follower-livedata@1.0.1
+fourseven:scss@0.9.5
 geojson-utils@1.0.0
 html-tools@1.0.0
 htmljs@1.0.0
@@ -25,6 +26,7 @@ meteor-platform@1.0.2
 meteor@1.0.3
 minifiers@1.0.2
 minimongo@1.0.2
+mizzao:bootstrap-3@3.2.0
 mongo@1.0.4
 observe-sequence@1.0.2
 ordered-dict@1.0.0

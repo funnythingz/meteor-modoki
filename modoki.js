@@ -1,23 +1,28 @@
+Tweets = new Mongo.Collection("tweets");
+
 if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault("counter", 0);
 
-  Template.hello.helpers({
-    counter: function () {
-      return Session.get("counter");
-    }
-  });
+    Template.hello.helpers({
+        title: function () {
+                   return "title";
+               }
+    });
 
-  Template.hello.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set("counter", Session.get("counter") + 1);
-    }
-  });
-}
+    Template.timeline.helpers({
+        tweets: function() {
+                    return Tweets.find({});
+                }
+    });
 
-if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
-  });
+    Template.hello.events({
+        'click #post': function (e) {
+            e.preventDefault();
+            if(_.isEmpty($('#tweet').val())) {
+                alert("いれてね");
+            } else {
+                Tweets.insert({tweet: $('#tweet').val()});
+                $('#tweet').val('')
+            }
+        }
+    });
 }
